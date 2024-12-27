@@ -65,3 +65,49 @@ Logs in an existing user.
   }
 }
 ```
+
+### GET /user/profile
+
+Gets the profile of the logged-in user.
+
+#### Request Headers
+
+```json
+{
+  "Authorization": "Bearer jwt_token"
+}
+```
+
+#### Response
+
+```json
+{
+  "_id": "user_id",
+  "fullname": {
+    "firstname": "John",
+    "lastname": "Doe"
+  },
+  "email": "john.doe@example.com",
+  // ...other user fields...
+}
+```
+
+### GET /user/logout
+
+Logs out the current user.
+
+#### Request Headers
+
+```json
+{
+  "Authorization": "Bearer jwt_token"
+}
+```
+
+#### Response
+
+```json
+{
+  "message": "Logged out successfully"
+}
+```
